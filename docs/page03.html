@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page03</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        a {
+            text-decoration: none;
+            color: #0d0101;
+            background-color: lightcyan;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            display: block;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        a:hover {
+            background-color: #4CAF50;
+            color:blue;
+            transform: scale(1.2);
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 20%;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            height: 5px;
+        }
+        button {
+            background-color: #5020af;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select the course you want</h1>
+    <a href="https://youtu.be/AT14lCXuMKI?si=qvXDW7O9JRp79akO">DSA</a>
+    <a href="https://youtu.be/j8nAHeVKL08?si=epziv33DnI90TbfM">C++</a>
+    <a href="https://youtu.be/6ZBY9yGNWbI?si=-l8JFE6hIuz-m13R">Competitive Programming</a>
+    <a href="https://youtu.be/AsYnEfOMs8I?si=lMbjvzCj95nQprxn">Aptitude</a>
+    <h2>Fill the feedback</h2>
+
+    <form id="feedback-form">
+        <label for="feedback">How was your experience? 😊</label>
+        <select id="feedback" name="feedback">
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="neutral">Neutral</option>
+            <option value="poor">Poor</option>
+            <option value="veryPoor">Very Poor</option>
+        </select>
+        <label for="comments">Any additional comments? 📝</label>
+        <textarea id="comments" name="comments" rows="1" cols="1" placeholder="Share your thoughts..."></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            alert('Thank you for your feedback');
+        });
+    </script>
+</body>
+</html>
